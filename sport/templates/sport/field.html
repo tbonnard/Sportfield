@@ -1,0 +1,66 @@
+{% extends 'sport/layout.html' %}
+
+
+{% block title %}{{field_name}}{% endblock %}
+
+{% block body %}
+
+<div id='create_club'>
+
+    <div id='title'>
+    <h3>Manage your field</h3>
+    </div>
+
+    <div>
+    {% if schedule%}
+    <p>Find below the available time(s) for that field:</p>
+        {% for i in schedule %}
+            <p>{{i.schedule_time}}</p>
+        {% endfor%}
+    {% else %}
+        <p>There's no schedule time for now.</p><p>Add a new one.</p>
+    {% endif %}
+    </div>
+
+</div>
+
+<div id='create_club'>
+
+    <div >
+        <h3>Add a new schedule</h3>
+    </div>
+
+    <div>
+    <form method="POST" action="{% url 'field_view' field.pk %}">
+        {% csrf_token %}
+        <label for="time">Choose an hour:</label>
+        <select id="time" name="time" required>
+            <option value="08:00">08:00</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+
+        </select>
+
+        <div id='no_field'>
+            <input type='submit' value='Add a schedule' class='btn btn-success'>
+        </div>
+    
+    </div>
+</div>
+
+
+<script>
+    //nav color   
+    document.querySelector('.nav').style.backgroundColor='rgb(97, 187, 119)';
+</script>
+
+{% endblock %}

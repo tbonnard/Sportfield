@@ -1,0 +1,49 @@
+{% extends "sport/login_register.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+
+
+<div >
+
+    <h3>Register on Sportfield</h3>
+
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+
+        <div id='login_register_field'> 
+            <input type='text' placeholder="Username" name="username" required class='form-control'>
+        </div>
+        <div id='login_register_field'>
+        <input type='email' placeholder="Email" name="email" required class='form-control'>
+        </div>
+        <div id='login_register_field'>
+        <input type='password' placeholder="password" name="password" required class='form-control'>
+        </div>
+        <div id='login_register_field'>
+            <input type='password' placeholder="re-enter your password" name="confirm_password" required class='form-control'>
+        </div>
+
+        <div id='login_register_field' >
+           <label>Are you a professional?</label>
+            <input type='checkbox' name="pro" class="form-check-input" >
+        </div>
+
+        <div id='login_register_field'>
+            <input type='submit' value='Register' name="register" class="btn btn-success">
+        </div>
+        <div id='login_register_field'>
+            {{message}}
+        </div>
+    </form>
+
+    <div id='login_register_field'>
+        Already have an account? <a href="{% url 'login' %}" style='color:white;'>Login here.</a>
+    </div>
+</div>
+
+
+
+{% endblock %}

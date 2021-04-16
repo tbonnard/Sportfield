@@ -1,0 +1,46 @@
+{% extends 'sport/layout.html' %}
+
+
+{% block title %}Create a new club{% endblock %}
+
+{% block body %}
+
+
+<div id='create_club'>
+    <div id='title'>
+    <h3>Create your club</h3>
+    </div>
+    
+    <div>
+    <form method="POST" action="{% url 'create_club' %}">
+        {% csrf_token %}
+        <h6>Club's name</h6>
+        <p>{{form.club}}</p>
+        <h6>Street name of the club</h6>
+        <p>{{form.address}}</p>
+        <h6>Street number of the club</h6>
+        <p>{{form.address_number}}</p>
+        <h6>City of the club</h6>
+        <p>{{form.city}}</p>
+        <h6>Zip Code of the club</h6>
+        <p>{{form.zip_code}}</p>
+        <h6>Country of the club</h6>
+        <p>{{form.country}}</p>
+        <h6>Image <i>(url)</i> of the club</h6>
+        <p>{{form.image_url}}</p>
+
+
+        <div>
+            <input type='submit' value='Create' name="create_club" id='create_club_btn'class='btn btn-success'>
+        </div>
+
+    </form>
+    </div>
+</div>
+
+<script>
+    //nav color   
+    document.querySelector('.nav').style.backgroundColor='rgb(97, 187, 119)';
+</script>
+
+{% endblock %}

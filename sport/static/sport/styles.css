@@ -1,0 +1,243 @@
+.login_register {
+    background-color: rgb(0, 122, 255);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form_login_register {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 300px;
+    color:white;
+    width: 400px;
+}
+
+
+#top_nav{
+    color: white; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+}
+
+#top_nav_item{
+    color: white; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+
+a, p, h1, h2, h3, h4, h5, h6 {
+font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+#small_img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#club_img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section_top {
+    margin: 0 auto;
+    text-align: center;
+    height: 800px;
+    padding-top: 150px;
+    background-color: rgb(0, 122, 255);
+    color: white;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.section, #div_create_field {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 75px;
+    color: rgb(80, 80, 80);
+    margin-bottom: 75px;
+
+}
+#div_create_field{
+    width: 400px;
+}
+
+
+
+#index_categ { 
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#index_categ > div {
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+}
+
+
+#index_categ_item {
+    border-radius: 50%;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    color: rgb(80, 80, 80);
+
+
+}
+#index_categ_item_item {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin: -55px 0 0 -55px; 
+}
+
+#category_button{
+    background-color: transparent;
+    border: transparent;
+}
+
+#button_cancel_field_list {
+    margin-top: 50px;
+    margin-left: 90%;
+    background-color: transparent;
+    border: transparent;
+}
+
+
+
+#button_cancel_field_list:hover {
+    background-color: rgb(243, 243, 243);
+    border-radius: 50%;
+}
+
+
+#list_field, #create_club, #date_search{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;    
+    margin-bottom: 50px;
+}
+
+
+
+#form_booking {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 250px;    
+    margin-bottom: 50px;
+}
+
+
+#create_club{
+    width: 400px;
+}
+
+#title {
+    margin-bottom: 50px;
+}
+
+#anchor {
+    margin-top: 25px;
+    color: white;
+}
+
+.td {
+    border: 1px solid black;
+    padding: 5px;
+}
+.th, table {
+    border: 2px solid black;
+    padding: 5px;
+
+}
+
+#button_add_field  {
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+#address_question, #create_field, #button_cancel_field, #create_club_btn, #login_register_field {
+    margin-top: 20px; 
+}
+
+.hidden {
+    display: none;
+}
+
+#no_field, #do_you_confirm, #date_input, #select_time_field {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+/* Style the tab  */ 
+.tab {
+    overflow: hidden;
+    background-color:rgb(0, 122, 255);
+    padding-top: 20px; 
+    margin: 0 auto;
+    text-align: center;
+
+  }  
+
+#tabclub {
+    background-color:rgb(97, 187, 119);
+ 
+}
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: white ;
+    color: rgb(80, 80, 80);
+  }
+  
+  /* Create an active/current tablink class    */
+  .tab button.active {
+    background-color: white;
+    color: rgb(80, 80, 80);;
+
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: 1px solid rgb(91, 107, 178);
+    border-top: none;
+  }

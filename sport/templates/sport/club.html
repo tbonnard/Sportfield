@@ -1,0 +1,193 @@
+{% extends 'sport/layout.html' %}
+{% load static %}
+
+
+{% block script %}
+<script src= "{% static 'sport/club.js' %}"></script>
+{% endblock %}
+
+
+{% block title %}{{club}}{% endblock %}
+
+{% block body %}
+
+
+
+
+<div class="tab" id='tabclub'>
+    <button class="tablinks active" onclick="openTab(event, 'club')">Club details</button>
+    {% if user.admin_pro %}
+    <button class="tablinks" onclick="openTab(event, 'field')">Fields info</button>
+    {% endif %}
+    <button class="tablinks" onclick="openTab(event, 'booking')">Booking history</button>
+</div>
+
+
+<div id="club" class="tabcontent" style="display: block;">
+        
+    <div class='section'>
+
+        <div>
+            <img src="{{club.image_url}}" alt="{{club}}" class="img-thumbnail" id='club_img'>
+        </div>
+        <h5>Club name</h5>
+        <p>{{club}}</p>
+
+        <h5>Club's address</h5>
+        <p>{{club.address_number}} {{club.address}} {{club.city}} {{club.zip_code}} {{club.country}}
+            <a title = '{{club.address_number}} {{club.address}} {{club.city}} {{club.zip_code}} {{club.country}}' href="https://www.google.ca/maps/place/{{club.address_number}} {{club.address}} {{club.city}} {{club.zip_code}} {{club.country}}" target="_blank">map</a>
+        </p>
+        <h5>Club's owner</h5>
+        <p>{{club.owner_club}}</p>
+        <h5>Owner's email</h5>
+        <p>{{club.owner_club.email}}</p>
+
+        
+    </div>
+</div>
+
+<div id="field" class="tabcontent">
+
+    <div class="section">
+
+        <div id='field_list'>
+            {%if fields %}
+                <table class='center'>
+                <thead>
+                    <tr>
+                        <th class='th'>Field Name</th>
+                        <th class='th'>Sport</th>
+                        <th class='th'>Price / hour</th>
+                        <th class='th'>Max schedule / day</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in fields %}
+                    <tr>
+                        <td class='td'>{{i.field_name}} - <a title = '{{i.address_number}} {{i.address}} {{i.city}} {{i.zip_code}} {{i.country}}' href="https://www.google.ca/maps/place/{{i.address_number}} {{i.address}} {{i.city}} {{i.zip_code}} {{i.country}}" target="_blank">map</a></td>
+                        <td class='td'>{{i.category}}</td>
+                        <td class='td'>{{i.price}}</td>
+                        <td class='td'><a href="{% url 'field_view' i.pk %}" >manage</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+
+                <p>There's no field associated with your club.</p>
+
+            {%endif%}
+
+            <div>
+                <button id="button_add_field" class='btn btn-success'>Add a new field</button>
+            </div>
+        </div>
+
+
+        <div id="div_create_field" >
+            <h3>Create a new sport field</h3>
+            <form method="POST" id='form_create_field' action="{% url 'create_field' club.pk %}"> 
+                {% csrf_token %}
+                <h6>Field name</h6>
+                <p>{{field_form.field_name}}</p>
+                <h6>Sport category</h6>
+                <p>{{field_form.category}}</p>
+                <h6>Price / slot time</h6>
+                <p>{{field_form.price}}</p>
+            
+            
+            <div id='address_question'>
+                <p>Is the address different from the club's address?</p>
+                <a id="same_address"  class='btn btn-light'>enter an address for the field</a>
+            </div>
+        
+            <div id='address'>
+                    <h6>Address of the field</h6>
+                    <p>{{field_form.address}}</p>
+                    <h6>Address number of the field</h6>
+                    <p>{{field_form.address_number}}</p>
+                    <h6>city of the field</h6>
+                    <p>{{field_form.city}}</p>
+                    <h6>Zip code of the field</h6>
+                    <p>{{field_form.zip_code}}</p>
+                    <h6>Country of the field</h6>
+                    <p>{{field_form.country}}</p>
+            </div>
+        
+                <div>
+                    <input type='submit' value='Create' name="create_field" id='create_field' data-field_club="{{club.pk}}" class='btn btn-success'>
+                </div>
+            </form>
+            <a id="button_cancel_field" class='btn btn-light'>Cancel</a>
+        
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<div id="booking" class="tabcontent">
+
+    <div class="section">  
+        {% if bookings %}
+            <table class='center'>
+            <thead>
+                <tr>
+                    <th class='th'>Field Name</th>
+                    <th class='th'>Sport</th>
+                    <th class='th'>Booking date</th>
+                    <th class='th'>Name of the user</th>
+                    <th class='th'>Price / hour</th>
+                    <th class='th'>Booking time</th>
+         
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in bookings %}
+                <tr>
+                    <td class='td'>{{i.field}}</td>
+                    <td class='td'>{{i.field.category}}</td>
+                    <td class='td'>{{i.date_book}}</td>
+                    <td class='td'>{{i.user}}</td>
+                    <td class='td'>{{i.field.price}}</td>
+                    <td class='td'>{{i.schedule_time_field}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {%else %}
+        <p>You don't have any booking for now. Search for a sport field and book it!</p>
+        <a class="btn btn-success" href="{% url 'index' %}">Go</a>
+        {% endif %}
+    
+    </div>
+
+</div>
+
+
+
+<script>
+     //nav color   
+    document.querySelector('.nav').style.backgroundColor='rgb(97, 187, 119)';
+
+    // manage the tabs
+      function openTab(evt, tab) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tab).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+</script>
+
+{% endblock %}
