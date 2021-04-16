@@ -2,10 +2,10 @@
 
 
 Final Project - [CS50’s Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/2020/ "CS50 - Web Programming with Python and JavaScript")
-</br></br>[About the course](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript "About CS50 - Web Programming with Python and JavaScript")
+</br>Details [About the course](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript "About CS50 - Web Programming with Python and JavaScript")
 </br></br>
-The goal was to design and implement a dynamic website with Django and JavaScript.
-</br>
+The goal of the project was to design and implement a dynamic website with Django and JavaScript.
+</br></br>
 
 ## Languages of the platform
 </br>python 3.7
