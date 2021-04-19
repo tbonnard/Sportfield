@@ -112,8 +112,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
 }
 
 #button_cancel_field_list {
-    margin-top: 50px;
-    margin-left: 90%;
+    margin-top:30px;
     background-color: transparent;
     border: transparent;
 }
@@ -126,7 +125,16 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
 }
 
 
-#list_field, #create_club, #date_search{
+
+#date_search{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;    
+    margin-bottom: 10px;
+}
+
+#list_field, #create_club{
     width: 95%;
     margin: 0 auto;
     text-align: center;
