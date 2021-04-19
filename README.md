@@ -6,6 +6,9 @@ Final Project - [CS50’s Web Programming with Python and JavaScript](https://cs
 </br></br>
 The goal of the project was to design and implement a dynamic website with Django and JavaScript.
 </br></br>
+The platform is just a project, but not a realistic platform on which you can trully book a field.
+</br></br>
+
 
 ## Languages of the platform
 </br>python 3.7
@@ -15,8 +18,12 @@ The goal of the project was to design and implement a dynamic website with Djang
 </br>CSS / Bootstrap
 </br>
 
+## Demo of the plaform
+</br>[Live demo](http://sportfield.pythonanywhere.com)
+</br>
+
 ## About the platform</br>
-<p>This mobile-responsive platform (app: sport / named Sportfield) is a web platform allowing users to book sport fields.
+<p>This platform is a web platform allowing users to book sport fields.
 </br></br>In order to do so, the platform groups two types of users:
 </br>- Club owner: user that can create a new club and add new fields to that club, and book fields
 <i>Depending on the page this pro user is, the color is different, to differentiate when the user is interacting for himself (booking, user info) or for the club (create a club, add a field, manage the field's schedules)</i>
@@ -24,24 +31,6 @@ The goal of the project was to design and implement a dynamic website with Djang
 </p>
 </br>
 
-## How to run your application</br>
-<p>
-Make sure you have Python3 installed and you use it to run this program.
-
-You have to make sure you have Django installed as well. If not you can use pip to install it.
-pip install Django
-
-or in case you use pip3
-pip3 install Django 
-
-Or use the requirements.txt file to make sure all the needed packages are installed using the pip command:
-pip install -r requirements.txt
-
-Go to the project folder where the manage.py file is.
-Run the server using the python command</p>
-</br></br>
-## User flow
-</br>
 
 ### Global flow of the club owner:</br>
 <p>
