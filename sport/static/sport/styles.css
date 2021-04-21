@@ -9,7 +9,9 @@
     text-align: center;
     margin-top: 300px;
     color:white;
-    width: 400px;
+    max-width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
@@ -36,6 +38,13 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
     max-height: 100px;
 }
 
+
+#home_img {
+    max-height: 400px;
+}
+
+
+
 #club_img {
     max-width: 200px;
     max-height: 200px;
@@ -46,6 +55,8 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
 .section_top {
     margin: 0 auto;
     text-align: center;
+    padding-left:10px;
+    padding-right:10px;
     height: 800px;
     padding-top: 150px;
     background-color: rgb(0, 122, 255);
@@ -63,10 +74,11 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
     margin-top: 75px;
     color: rgb(80, 80, 80);
     margin-bottom: 75px;
-
+    padding-left:10px;
+    padding-right:10px;
 }
 #div_create_field{
-    width: 400px;
+    max-width: 400px;
 }
 
 
@@ -74,7 +86,8 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
 #index_categ { 
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: space-evenly;
+
 }
 
 #index_categ > div {
@@ -85,7 +98,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
     width: 250px;
     margin: 0 auto;
     margin-bottom: 50px;
-
+    text-align: center;
 }
 
 
@@ -96,9 +109,8 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
     text-align: center;
     position: relative;
     color: rgb(80, 80, 80);
-
-
 }
+
 #index_categ_item_item {
     position: absolute;
     top: 55%;
@@ -154,7 +166,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
 
 
 #create_club{
-    width: 400px;
+    max-width: 400px;
 }
 
 #title {
@@ -248,4 +260,17 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
     padding: 6px 12px;
     border-top: 1px solid rgb(91, 107, 178);
     border-top: none;
+  }
+
+  @media (max-width: 600px) {
+    #home_img {
+        max-height: 300px;
+    }
+    #form_booking {
+        margin-top: 150px;    
+    }
+    .section_top {
+        padding-top: 75px;
+
+    }
   }
