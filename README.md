@@ -10,7 +10,7 @@ The platform is just a project, but not a realistic platform on which you can tr
 </br></br>
 
 
-## Languages of the platform
+### Languages of the platform
 </br>python 3.7
 </br>Django framework
 </br>javascript <i>(data fetch / Data calls / DOM)</i>
@@ -18,7 +18,7 @@ The platform is just a project, but not a realistic platform on which you can tr
 </br>CSS / Bootstrap
 </br>
 
-## Demo of the plaform
+### Demo of the plaform
 </br>[Live demo](http://sportfield.pythonanywhere.com)
 </br>
 
