@@ -1,17 +1,16 @@
 # Sportfield
 
 
-Final Project - [CS50’s Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/2020/ "CS50 - Web Programming with Python and JavaScript")
-</br>Details [About the course](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript "About CS50 - Web Programming with Python and JavaScript")
-</br></br>
+Final Project of the [CS50’s Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/2020/ "CS50 - Web Programming with Python and JavaScript")
+</br>
 The goal of the project was to design and implement a dynamic website with Django and JavaScript.
-</br></br>
+</br>
 The platform is just a project, but not a realistic platform on which you can trully book a field.
 </br></br>
-
-
+Details [About the course](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript "About CS50 - Web Programming with Python and JavaScript")
+</br></br>
 ### Languages of the platform
-</br>python 3.7
+python 3.7
 </br>Django framework
 </br>javascript <i>(data fetch / Data calls / DOM)</i>
 </br>HTML
@@ -19,8 +18,8 @@ The platform is just a project, but not a realistic platform on which you can tr
 </br>
 
 ### Demo of the plaform
-</br>[Live demo](http://sportfield.pythonanywhere.com)
-</br>
+[Live demo](http://sportfield.pythonanywhere.com)
+</br></br>
 
 ## About the platform</br>
 <p>This platform is a web platform allowing users to book sport fields.
