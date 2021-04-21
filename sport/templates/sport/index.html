@@ -49,13 +49,15 @@
             {% for i in categories %}
                 <div id = "index_categ_item">
 
+                    <div> 
+                        <a>{{i.category}}</a>
+                    </div>
+
                     <div id = index_categ_item_item> 
-                    <button  id='category_button' data-category='{{i.pk}}'><img src="{{i.image_url}}" alt="{{i.category}}" class="img-thumbnail" id='small_img'></button>
+                        <button  id='category_button' data-category='{{i.pk}}'><img src="{{i.image_url}}" alt="{{i.category}}" class="img-thumbnail" id='small_img'></button>
                     </div> 
      
-                    <div> 
-                    <a>{{i.category}}</a>
-                    </div>
+
 
 
                 </div>

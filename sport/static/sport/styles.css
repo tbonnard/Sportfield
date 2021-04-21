@@ -77,10 +77,11 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
     padding-left:10px;
     padding-right:10px;
 }
+
+
 #div_create_field{
     max-width: 400px;
 }
-
 
 
 #index_categ { 
@@ -93,29 +94,20 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
 #index_categ > div {
     background-color: rgb(255, 255, 255);
     font-size: 20px;
-    margin: 20px;
-    padding: 20px;
-    width: 250px;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    max-width: 300px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 
 #index_categ_item {
-    border-radius: 50%;
     height: 200px;
-    margin: 0 auto;
     text-align: center;
-    position: relative;
     color: rgb(80, 80, 80);
 }
 
 #index_categ_item_item {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    margin: -55px 0 0 -55px; 
+    padding-top: 10px;
 }
 
 #category_button{
@@ -271,6 +263,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif ;
     }
     .section_top {
         padding-top: 75px;
+        height: 650px;
 
     }
   }
