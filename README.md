@@ -1,7 +1,6 @@
 # Sportfield
 
-
-Final Project of the [Harvard - CS50’s Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/2020/ "CS50 - Web Programming with Python and JavaScript")
+Final Project (and 1st of my "real projects") of the [Harvard - CS50’s Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/2020/ "CS50 - Web Programming with Python and JavaScript")
 </br>
 The goal of the project was to design and implement a dynamic website with Django and JavaScript.
 </br>
